@@ -55,7 +55,12 @@ const Hero = () => {
           >
             <Github className="w-5 h-5" />
           </Button>
-          <Button variant="ghost" size="icon" className="rounded-full">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="rounded-full"
+            onClick={() => window.open('https://www.linkedin.com/in/bhawnarupani/', '_blank')}
+          >
             <Linkedin className="w-5 h-5" />
           </Button>
           <Button variant="ghost" size="icon" className="rounded-full">
