@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const fullText = "Senior Generative AI Developer"; // Changed from "Engineer" to "Developer"
+  const fullText = "Senior Generative AI Developer";
   const typingSpeed = 100;
+
   useEffect(() => {
     if (typedText.length < fullText.length) {
       const timeout = setTimeout(() => {
@@ -13,8 +15,8 @@ const Hero = () => {
       return () => clearTimeout(timeout);
     }
   }, [typedText]);
+
   return <section id="home" className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16">
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-tech-dark z-0 opacity-90"></div>
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-tech-blue opacity-5 blur-3xl rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-tech-purple opacity-5 blur-3xl rounded-full transform -translate-x-1/4 translate-y-1/4"></div>
@@ -45,7 +47,12 @@ const Hero = () => {
         </div>
 
         <div className="flex space-x-6 mb-16">
-          <Button variant="ghost" size="icon" className="rounded-full">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="rounded-full"
+            onClick={() => window.open('https://github.com/BRupani', '_blank')}
+          >
             <Github className="w-5 h-5" />
           </Button>
           <Button variant="ghost" size="icon" className="rounded-full">
@@ -64,4 +71,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
