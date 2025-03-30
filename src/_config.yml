@@ -5,6 +5,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://brupani.github.io/ai-nexus-exhibit" # the base hostname & protocol for your site
 
 # Build settings
+# Build settings
+source: src
+# destination: _site
+# markdown: kramdown
+# theme: minima
 markdown: kramdown
 theme: minima
 
