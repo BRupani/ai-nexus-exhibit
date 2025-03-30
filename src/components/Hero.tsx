@@ -1,13 +1,10 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
-
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const fullText = "Senior Generative AI Developer";  // Changed from "Engineer" to "Developer"
+  const fullText = "Senior Generative AI Developer"; // Changed from "Engineer" to "Developer"
   const typingSpeed = 100;
-
   useEffect(() => {
     if (typedText.length < fullText.length) {
       const timeout = setTimeout(() => {
@@ -16,12 +13,7 @@ const Hero = () => {
       return () => clearTimeout(timeout);
     }
   }, [typedText]);
-
-  return (
-    <section
-      id="home"
-      className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16"
-    >
+  return <section id="home" className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-tech-dark z-0 opacity-90"></div>
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-tech-blue opacity-5 blur-3xl rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
@@ -41,24 +33,13 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-8">
-          Transforming industries with AI solutions across Europe, India, and the
-          US. Expertise in cybersecurity, finance, travel, e-commerce, and legal
-          technology.
-        </p>
+        <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-8">Transforming industries with AI solutions across Europe, India, and the US. Expertise in AI for cybersecurity, finance, travel, e-commerce, and legal technology.</p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-tech-teal to-tech-blue hover:from-tech-blue hover:to-tech-teal transition-all duration-300"
-          >
+          <Button size="lg" className="bg-gradient-to-r from-tech-teal to-tech-blue hover:from-tech-blue hover:to-tech-teal transition-all duration-300">
             View Projects
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-gray-500 hover:bg-tech-light-gray/20"
-          >
+          <Button size="lg" variant="outline" className="border-gray-500 hover:bg-tech-light-gray/20">
             Contact Me
           </Button>
         </div>
@@ -81,8 +62,6 @@ const Hero = () => {
           <ChevronDown className="w-8 h-8 text-gray-400" />
         </a>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
