@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { MapPin } from "lucide-react";
 
@@ -15,23 +14,23 @@ type TimelineItem = {
 const timelineData: TimelineItem[] = [
   {
     id: 1,
-    year: "2022-Present",
-    title: "Senior AI Solutions Architect",
-    company: "Google",
+    year: "2025-Present",
+    title: "Senior Gen AI Developer",
+    company: "Cygeniq",
     location: "Mountain View, CA",
     region: "US",
     description:
-      "Leading generative AI solutions for enterprise clients. Developing custom LLM implementations with focus on reliability and fine-tuning for specific business domains.",
+      "Working at the intersection of cybersecurity and AI. Leading generative AI solutions with focus on reliability and fine-tuning for specific security domains.",
   },
   {
     id: 2,
-    year: "2020-2022",
-    title: "AI Technical Lead",
-    company: "Amazon",
+    year: "2022-2024",
+    title: "Data Scientist",
+    company: "HRS Group",
     location: "Berlin, Germany",
     region: "Europe",
     description:
-      "Directed AI initiatives for e-commerce optimization. Implemented generative models for product recommendations and search enhancement across European markets.",
+      "Directed AI initiatives for travel and e-commerce optimization. Implemented recommendation engines and generative models for product recommendations across Fortune 500 clients and finance projects.",
   },
   {
     id: 3,
