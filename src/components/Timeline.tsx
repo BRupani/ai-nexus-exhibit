@@ -27,6 +27,17 @@ const timelineData: TimelineItem[] = [
   },
   {
     id: 2,
+    year: "2024-Present",
+    title: "AI Developer",
+    company: "Tech Startup",
+    location: "Remote",
+    region: "India",
+    type: "work",
+    description:
+      "Working in the legal AI domain developing intelligent solutions that combine legal expertise with artificial intelligence technologies.",
+  },
+  {
+    id: 3,
     year: "2022-2024",
     title: "Data Scientist",
     company: "HRS Group",
@@ -34,10 +45,10 @@ const timelineData: TimelineItem[] = [
     region: "Europe",
     type: "work",
     description:
-      "Directed AI initiatives for travel and e-commerce optimization. Implemented recommendation engines and generative models for product recommendations across Fortune 500 clients and finance projects.",
+      "Directed AI initiatives for travel and e-commerce optimization. Implemented recommendation engines and generative models for product recommendations across Fortune 500 clients and finance projects. Developed global travel data strategy for procurement and AI solutions.",
   },
   {
-    id: 3,
+    id: 4,
     year: "2021-2022",
     title: "Tech Leaders Fellowship Program",
     company: "Plaksha University",
@@ -48,18 +59,29 @@ const timelineData: TimelineItem[] = [
       "Completed post-graduate degree in collaboration with UC-Berkeley and Purdue University. Selected among <5% acceptance rate and mentored by top start-up founders, angel investors and global AI leaders from Fractal, Inc42, Infoedge, IBM, Indifi, Havells, etc.",
   },
   {
-    id: 4,
+    id: 5,
+    year: "2021-2022",
+    title: "AI Developer",
+    company: "Tech Startup",
+    location: "Remote",
+    region: "India",
+    type: "work",
+    description:
+      "Worked on innovative AI solutions in computer vision for posture correction with a team of 4, creating cutting-edge applications that blend healthcare with artificial intelligence.",
+  },
+  {
+    id: 6,
     year: "2017-2021",
-    title: "Bachelor of Engineering",
+    title: "Bachelor of Engineering in Computer Science",
     company: "Visvesvaraya Technological University",
     location: "Bangalore, India",
     region: "India",
     type: "education",
     description:
-      "Graduated with First Class with Distinction (FCD) in Engineering.",
+      "Graduated with First Class with Distinction (FCD) in Computer Science Engineering.",
   },
   {
-    id: 5,
+    id: 7,
     year: "2018-2020",
     title: "ML Engineer - Cybersecurity",
     company: "Airbus",
@@ -70,7 +92,7 @@ const timelineData: TimelineItem[] = [
       "Designed neural network architectures for threat detection in aviation systems. Integrated AI with traditional security protocols for enhanced defense capabilities.",
   },
   {
-    id: 6,
+    id: 8,
     year: "2016-2018",
     title: "AI Consultant - Finance",
     company: "Major Financial Institution",
@@ -81,7 +103,7 @@ const timelineData: TimelineItem[] = [
       "Developed predictive models for risk assessment and fraud detection. Implemented NLP solutions for automated compliance and regulatory reporting.",
   },
   {
-    id: 7,
+    id: 9,
     year: "2014-2016",
     title: "Machine Learning Specialist",
     company: "Tech Startup",
