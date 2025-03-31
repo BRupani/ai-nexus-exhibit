@@ -1,119 +1,8 @@
 
 import { useState, useEffect, useRef } from "react";
-import { MapPin, GraduationCap, Briefcase } from "lucide-react";
-
-type TimelineItem = {
-  id: number;
-  year: string;
-  title: string;
-  company: string;
-  location: string;
-  description: string;
-  region: "Europe" | "US" | "India";
-  type: "work" | "education";
-};
-
-const timelineData: TimelineItem[] = [
-  {
-    id: 1,
-    year: "2025-Present",
-    title: "Senior Gen AI Developer",
-    company: "Cygeniq",
-    location: "Bangalore, India",
-    region: "India",
-    type: "work",
-    description:
-      "Working at the intersection of cybersecurity and AI. Leading generative AI solutions with focus on reliability and fine-tuning for specific security domains.",
-  },
-  {
-    id: 2,
-    year: "2024-Present",
-    title: "AI Developer",
-    company: "Tech Startup",
-    location: "Remote",
-    region: "India",
-    type: "work",
-    description:
-      "Working in the legal AI domain developing intelligent solutions that combine legal expertise with artificial intelligence technologies.",
-  },
-  {
-    id: 3,
-    year: "2022-2024",
-    title: "Data Scientist",
-    company: "HRS Group",
-    location: "Remote & Onsite, Berlin, Germany",
-    region: "Europe",
-    type: "work",
-    description:
-      "Directed AI initiatives for travel and e-commerce optimization. Implemented recommendation engines and generative models for product recommendations across Fortune 500 clients and finance projects. Developed global travel data strategy for procurement and AI solutions.",
-  },
-  {
-    id: 4,
-    year: "2021-2022",
-    title: "Tech Leaders Fellowship Program",
-    company: "Plaksha University",
-    location: "Mohali, Punjab, India",
-    region: "India",
-    type: "education",
-    description:
-      "Completed post-graduate degree in collaboration with UC-Berkeley and Purdue University. Selected among <5% acceptance rate and mentored by top start-up founders, angel investors and global AI leaders from Fractal, Inc42, Infoedge, IBM, Indifi, Havells, etc.",
-  },
-  {
-    id: 5,
-    year: "2021-2022",
-    title: "AI Developer",
-    company: "Tech Startup",
-    location: "Remote",
-    region: "India",
-    type: "work",
-    description:
-      "Worked on innovative AI solutions in computer vision for posture correction with a team of 4, creating cutting-edge applications that blend healthcare with artificial intelligence.",
-  },
-  {
-    id: 6,
-    year: "2017-2021",
-    title: "Bachelor of Engineering in Computer Science",
-    company: "Visvesvaraya Technological University",
-    location: "Bangalore, India",
-    region: "India",
-    type: "education",
-    description:
-      "Graduated with First Class with Distinction (FCD) in Computer Science Engineering.",
-  },
-  {
-    id: 7,
-    year: "2018-2020",
-    title: "ML Engineer - Cybersecurity",
-    company: "Airbus",
-    location: "Toulouse, France",
-    region: "Europe",
-    type: "work",
-    description:
-      "Designed neural network architectures for threat detection in aviation systems. Integrated AI with traditional security protocols for enhanced defense capabilities.",
-  },
-  {
-    id: 8,
-    year: "2016-2018",
-    title: "AI Consultant - Finance",
-    company: "Major Financial Institution",
-    location: "London, UK",
-    region: "Europe",
-    type: "work",
-    description:
-      "Developed predictive models for risk assessment and fraud detection. Implemented NLP solutions for automated compliance and regulatory reporting.",
-  },
-  {
-    id: 9,
-    year: "2014-2016",
-    title: "Machine Learning Specialist",
-    company: "Tech Startup",
-    location: "Bangalore, India",
-    region: "India",
-    type: "work",
-    description:
-      "Built innovative AI solutions for travel industry clients. Created recommendation engines and customer service automation systems using early transformer models.",
-  },
-];
+import TimelineItem, { TimelineItemData } from "./TimelineItem";
+import TimelineFilters from "./TimelineFilters";
+import { timelineData } from "./TimelineData";
 
 const Timeline = () => {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
@@ -170,81 +59,12 @@ const Timeline = () => {
             My career spans multiple continents, Fortune 500 companies, and prestigious educational institutions, bringing AI solutions to diverse industries and markets.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-2 mt-6">
-            <button
-              onClick={() => setActiveFilter(null)}
-              className={`px-4 py-1 rounded-full text-sm transition-all ${
-                activeFilter === null
-                  ? "bg-tech-blue text-white"
-                  : "bg-tech-light-gray text-gray-300 hover:bg-tech-light-gray/80"
-              }`}
-            >
-              All Regions
-            </button>
-            <button
-              onClick={() => setActiveFilter("US")}
-              className={`px-4 py-1 rounded-full text-sm transition-all ${
-                activeFilter === "US"
-                  ? "bg-tech-blue text-white"
-                  : "bg-tech-light-gray text-gray-300 hover:bg-tech-light-gray/80"
-              }`}
-            >
-              United States
-            </button>
-            <button
-              onClick={() => setActiveFilter("Europe")}
-              className={`px-4 py-1 rounded-full text-sm transition-all ${
-                activeFilter === "Europe"
-                  ? "bg-tech-blue text-white"
-                  : "bg-tech-light-gray text-gray-300 hover:bg-tech-light-gray/80"
-              }`}
-            >
-              Europe
-            </button>
-            <button
-              onClick={() => setActiveFilter("India")}
-              className={`px-4 py-1 rounded-full text-sm transition-all ${
-                activeFilter === "India"
-                  ? "bg-tech-blue text-white"
-                  : "bg-tech-light-gray text-gray-300 hover:bg-tech-light-gray/80"
-              }`}
-            >
-              India
-            </button>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-2 mt-3">
-            <button
-              onClick={() => setActiveTypeFilter(null)}
-              className={`px-4 py-1 rounded-full text-sm transition-all ${
-                activeTypeFilter === null
-                  ? "bg-tech-purple text-white"
-                  : "bg-tech-light-gray text-gray-300 hover:bg-tech-light-gray/80"
-              }`}
-            >
-              All Types
-            </button>
-            <button
-              onClick={() => setActiveTypeFilter("work")}
-              className={`px-4 py-1 rounded-full text-sm transition-all ${
-                activeTypeFilter === "work"
-                  ? "bg-tech-purple text-white"
-                  : "bg-tech-light-gray text-gray-300 hover:bg-tech-light-gray/80"
-              }`}
-            >
-              Work Experience
-            </button>
-            <button
-              onClick={() => setActiveTypeFilter("education")}
-              className={`px-4 py-1 rounded-full text-sm transition-all ${
-                activeTypeFilter === "education"
-                  ? "bg-tech-purple text-white"
-                  : "bg-tech-light-gray text-gray-300 hover:bg-tech-light-gray/80"
-              }`}
-            >
-              Education
-            </button>
-          </div>
+          <TimelineFilters 
+            activeFilter={activeFilter}
+            setActiveFilter={setActiveFilter}
+            activeTypeFilter={activeTypeFilter}
+            setActiveTypeFilter={setActiveTypeFilter}
+          />
         </div>
 
         <div className="relative">
@@ -253,46 +73,12 @@ const Timeline = () => {
 
           <div className="space-y-12">
             {filteredData.map((item, index) => (
-              <div
+              <TimelineItem
                 key={item.id}
-                id={`item-${item.id}`}
+                item={item}
+                isVisible={visibleItems[item.id] || false}
                 ref={(el) => (itemRefs.current[index] = el)}
-                className={`flex flex-col md:flex-row items-center md:even:flex-row-reverse gap-8 relative animate-on-scroll ${
-                  visibleItems[item.id] ? "active" : ""
-                }`}
-              >
-                {/* Timeline dot */}
-                <div className={`absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full ${
-                  item.type === "education" ? "bg-tech-teal" : "bg-tech-purple"
-                } border-4 border-tech-dark-gray z-10`}></div>
-
-                {/* Year */}
-                <div className="md:w-1/2 text-center md:text-right md:even:text-left">
-                  <span className="inline-block px-4 py-1 rounded-full bg-tech-light-gray text-tech-teal font-medium">
-                    {item.year}
-                  </span>
-                </div>
-
-                {/* Content */}
-                <div className="md:w-1/2 bg-tech-light-gray/20 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50">
-                  <h3 className="text-xl font-bold mb-1 text-white">
-                    {item.title}
-                  </h3>
-                  <h4 className="text-lg font-medium mb-2 text-tech-teal">
-                    {item.company}
-                  </h4>
-                  <div className="flex items-center text-sm text-gray-400 mb-4">
-                    {item.type === "education" ? (
-                      <GraduationCap className="w-4 h-4 mr-1" />
-                    ) : (
-                      <Briefcase className="w-4 h-4 mr-1" />
-                    )}
-                    <MapPin className="w-4 h-4 mr-1 ml-2" />
-                    {item.location}
-                  </div>
-                  <p className="text-gray-300">{item.description}</p>
-                </div>
-              </div>
+              />
             ))}
           </div>
         </div>
