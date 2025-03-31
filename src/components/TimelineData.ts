@@ -16,7 +16,7 @@ export const timelineData: TimelineItemData[] = [
   {
     id: 2,
     year: "2024-Present",
-    title: "AI Developer",
+    title: "Co-Founder & CTO",
     company: "Tech Startup",
     location: "Remote",
     region: "India",
@@ -49,13 +49,13 @@ export const timelineData: TimelineItemData[] = [
   {
     id: 5,
     year: "2021-2022",
-    title: "AI Developer",
-    company: "Tech Startup",
+    title: "Founder & CEO",
+    company: "AI Startup",
     location: "Remote",
     region: "India",
     type: "work",
     description:
-      "Worked on innovative AI solutions in computer vision for posture correction with a team of 4, creating cutting-edge applications that blend healthcare with artificial intelligence.",
+      "Founded and led a startup focused on innovative AI solutions in computer vision for posture correction with a team of 4, creating cutting-edge applications that blend healthcare with artificial intelligence.",
   },
   {
     id: 6,
@@ -67,38 +67,5 @@ export const timelineData: TimelineItemData[] = [
     type: "education",
     description:
       "Graduated with First Class with Distinction (FCD) in Computer Science Engineering.",
-  },
-  {
-    id: 7,
-    year: "2018-2020",
-    title: "ML Engineer - Cybersecurity",
-    company: "Airbus",
-    location: "Toulouse, France",
-    region: "Europe",
-    type: "work",
-    description:
-      "Designed neural network architectures for threat detection in aviation systems. Integrated AI with traditional security protocols for enhanced defense capabilities.",
-  },
-  {
-    id: 8,
-    year: "2016-2018",
-    title: "AI Consultant - Finance",
-    company: "Major Financial Institution",
-    location: "London, UK",
-    region: "Europe",
-    type: "work",
-    description:
-      "Developed predictive models for risk assessment and fraud detection. Implemented NLP solutions for automated compliance and regulatory reporting.",
-  },
-  {
-    id: 9,
-    year: "2014-2016",
-    title: "Machine Learning Specialist",
-    company: "Tech Startup",
-    location: "Bangalore, India",
-    region: "India",
-    type: "work",
-    description:
-      "Built innovative AI solutions for travel industry clients. Created recommendation engines and customer service automation systems using early transformer models.",
-  },
+  }
 ];

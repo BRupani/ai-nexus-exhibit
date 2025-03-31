@@ -77,7 +77,7 @@ const Timeline = () => {
                 key={item.id}
                 item={item}
                 isVisible={visibleItems[item.id] || false}
-                ref={(el) => (itemRefs.current[index] = el)}
+                ref={(el: HTMLDivElement | null) => (itemRefs.current[index] = el)}
               />
             ))}
           </div>
