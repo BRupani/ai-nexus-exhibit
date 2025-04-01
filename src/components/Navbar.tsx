@@ -38,7 +38,7 @@ const Navbar = () => {
     }
   ];
 
-  const resumeUrl = "https://drive.google.com/file/d/1TJjmGbKQHgPQHkyp2JWoT5LCd5I_Nz-/view";
+  const resumeUrl = "https://docs.google.com/document/d/1NMPU_DZXWqoysbo6J8UkF0LiIwn2yHMAZ0UlixApqx8/edit?usp=sharing";
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -48,7 +48,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 ${isScrolled ? "bg-tech-dark/90 backdrop-blur-md shadow-md" : "bg-transparent"}`}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <div className="flex items-center">
-          <span className="text-2xl font-bold text-gradient">AI Solutions Developer</span>
+          <span className="text-2xl font-bold text-gradient">AI Solutions Engineer</span>
         </div>
 
         {/* Desktop Navigation */}

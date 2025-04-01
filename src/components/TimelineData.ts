@@ -5,13 +5,13 @@ export const timelineData: TimelineItemData[] = [
   {
     id: 1,
     year: "2025-Present",
-    title: "Senior Gen AI Developer",
+    title: "Senior Gen AI Engineer",
     company: "Cygeniq",
     location: "Bangalore, India",
     region: "India",
     type: "work",
     description:
-      "Working at the intersection of cybersecurity and AI. Leading generative AI solutions with focus on reliability and fine-tuning for specific security domains.",
+      "Working at the intersection of cybersecurity and AI. Leading generative AI solutions with focus on reliability, fine-tuning for specific security domains, and building agentic AI.",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const timelineData: TimelineItemData[] = [
     year: "2022-2024",
     title: "Data Scientist",
     company: "HRS Group",
-    location: "Remote & Onsite, Berlin, Germany",
+    location: "Remote & Onsite",
     region: "Europe",
     type: "work",
     description:

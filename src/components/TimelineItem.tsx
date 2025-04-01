@@ -18,8 +18,21 @@ type TimelineItemProps = {
   isVisible: boolean;
 };
 
+const getCompanyLink = (company: string): string | null => {
+  const links: Record<string, string> = {
+    "Plaksha University": "https://plaksha.edu.in/",
+    "HRS Group": "https://www.hrs.de",
+    "Cygeniq": "https://cygeniq.ai",
+    "Tech Startup": "https://lawroomai.com"
+  };
+  
+  return links[company] || null;
+};
+
 const TimelineItem = forwardRef<HTMLDivElement, TimelineItemProps>(
   ({ item, isVisible }, ref) => {
+    const companyLink = getCompanyLink(item.company);
+    
     return (
       <div
         id={`item-${item.id}`}
@@ -46,7 +59,18 @@ const TimelineItem = forwardRef<HTMLDivElement, TimelineItemProps>(
         <div className="md:w-1/2 bg-tech-light-gray/20 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50">
           <h3 className="text-xl font-bold mb-1 text-white">{item.title}</h3>
           <h4 className="text-lg font-medium mb-2 text-tech-teal">
-            {item.company}
+            {companyLink ? (
+              <a 
+                href={companyLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                {item.company}
+              </a>
+            ) : (
+              item.company
+            )}
           </h4>
           <div className="flex items-center text-sm text-gray-400 mb-4">
             {item.type === "education" ? (

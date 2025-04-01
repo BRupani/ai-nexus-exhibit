@@ -1,9 +1,11 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+
 const Contact = () => {
   const [formState, setFormState] = useState({
     name: "",
@@ -13,19 +15,16 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
+    const { name, value } = e.target;
     setFormState(prev => ({
       ...prev,
       [name]: value
     }));
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -50,7 +49,9 @@ const Contact = () => {
       }, 3000);
     }, 1500);
   };
-  return <section id="contact" className="py-20 bg-tech-dark relative overflow-hidden">
+
+  return (
+    <section id="contact" className="py-20 bg-tech-dark relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-tech-purple opacity-5 blur-3xl rounded-full"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-tech-teal opacity-5 blur-3xl rounded-full"></div>
 
@@ -82,7 +83,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-300">Email</h4>
-                  <p className="text-white">bhawna.rupani.ai@gmail.com</p>
+                  <p className="text-white">bhawna.rupani@plaksha.edu.in</p>
                 </div>
               </div>
 
@@ -92,7 +93,16 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-300">LinkedIn</h4>
-                  <p className="text-white">https://www.linkedin.com/in/bhawnarupani/</p>
+                  <p className="text-white">
+                    <a 
+                      href="https://www.linkedin.com/in/bhawnarupani/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      linkedin.com/in/bhawnarupani/
+                    </a>
+                  </p>
                 </div>
               </div>
 
@@ -102,7 +112,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-300">Location</h4>
-                  <p className="text-white">Available globally for remote work</p>
+                  <p className="text-white">Available globally or for remote work</p>
                 </div>
               </div>
             </div>
@@ -140,7 +150,8 @@ const Contact = () => {
               </div>
 
               <Button type="submit" className="w-full bg-gradient-to-r from-tech-teal to-tech-blue hover:from-tech-blue hover:to-tech-teal transition-all duration-300" disabled={isSubmitting || isSubmitted}>
-                {isSubmitting ? <span className="flex items-center">
+                {isSubmitting ? (
+                  <span className="flex items-center">
                     <span className="animate-spin mr-2">
                       <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -148,15 +159,22 @@ const Contact = () => {
                       </svg>
                     </span>
                     Sending...
-                  </span> : isSubmitted ? <span className="flex items-center">
+                  </span>
+                ) : isSubmitted ? (
+                  <span className="flex items-center">
                     <CheckCircle2 className="mr-2 w-5 h-5" />
                     Message Sent!
-                  </span> : "Send Message"}
+                  </span>
+                ) : (
+                  "Send Message"
+                )}
               </Button>
             </form>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;
