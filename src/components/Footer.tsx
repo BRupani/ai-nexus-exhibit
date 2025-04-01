@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Twitter, Medium } from "lucide-react";
+
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -49,7 +50,20 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Medium className="w-5 h-5" />
+              {/* Custom Medium SVG icon since Medium is not available in lucide-react */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5"
+              >
+                <path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+                <path d="M8 9l4 4 4-4" />
+              </svg>
             </a>
             <a
               href="mailto:bhawna.rupani@plaksha.edu.in"
