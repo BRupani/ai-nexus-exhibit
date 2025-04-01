@@ -1,9 +1,8 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
+import { CheckCircle2, Mail, MapPin, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -89,7 +88,7 @@ const Contact = () => {
 
               <div className="flex items-start space-x-4">
                 <div className="bg-tech-light-gray/30 p-3 rounded-full">
-                  <Phone className="text-tech-teal w-5 h-5" />
+                  <Linkedin className="text-tech-teal w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-300">LinkedIn</h4>

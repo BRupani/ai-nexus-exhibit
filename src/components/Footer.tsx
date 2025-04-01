@@ -1,5 +1,4 @@
-
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Medium } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -42,6 +41,15 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Twitter className="w-5 h-5" />
+            </a>
+            <a
+              href="https://medium.com/@Bhawna_Rupani"
+              className="text-gray-400 hover:text-white transition-colors"
+              aria-label="Medium"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Medium className="w-5 h-5" />
             </a>
             <a
               href="mailto:bhawna.rupani@plaksha.edu.in"
