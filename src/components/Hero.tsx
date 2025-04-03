@@ -91,7 +91,7 @@ const Hero = () => {
             className="rounded-full"
             onClick={() => window.open('https://medium.com/@Bhawna_Rupani', '_blank')}
           >
-            {/* Custom Medium SVG icon since Medium is not available in lucide-react */}
+            {/* Updated Medium SVG icon to match the provided image */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -102,8 +102,10 @@ const Hero = () => {
               strokeLinejoin="round"
               className="w-5 h-5"
             >
-              <path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
-              <path d="M8 9l4 4 4-4" />
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <circle cx="8.5" cy="12" r="3.5" />
+              <circle cx="15" cy="12" r="2.5" />
+              <circle cx="19" cy="12" r="1.5" />
             </svg>
           </Button>
           <Button 
