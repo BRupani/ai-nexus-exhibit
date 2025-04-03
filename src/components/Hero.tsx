@@ -102,10 +102,8 @@ const Hero = () => {
               strokeLinejoin="round"
               className="w-5 h-5"
             >
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-              <circle cx="8.5" cy="12" r="3.5" />
-              <circle cx="15" cy="12" r="2.5" />
-              <circle cx="19" cy="12" r="1.5" />
+              <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
+              <path d="M18 7L11.8 15.1L11.1 14.1L6 7M7 7V14M11.8 7V15M16.5 7V14" />
             </svg>
           </Button>
           <Button 
