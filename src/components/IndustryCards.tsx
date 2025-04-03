@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import { Shield, Landmark, Plane, ShoppingBag, Scale } from "lucide-react";
+import { Shield, Landmark, Plane, ShoppingBag, Scale, Lightbulb } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 type Industry = {
@@ -16,7 +16,7 @@ const industries: Industry[] = [
     title: "Cybersecurity & AI",
     icon: <Shield className="w-8 h-8" />,
     description:
-      "Developing advanced threat detection systems and implementing AI-driven security protocols for enterprise networks and critical infrastructure protection.",
+      "Developing advanced threat detection systems, implementing AI-driven security protocols, and building cutting edge agentic AI workflows for enterprise networks and critical infrastructure protection.",
   },
   {
     id: 2,
@@ -45,6 +45,13 @@ const industries: Industry[] = [
     icon: <Scale className="w-8 h-8" />,
     description:
       "Developing document analysis systems, automated contract review, and legal research tools using natural language processing and large language models.",
+  },
+  {
+    id: 6,
+    title: "AI Consulting",
+    icon: <Lightbulb className="w-8 h-8" />,
+    description:
+      "Providing strategic AI consulting services for all kinds of clients, from startups to enterprise organizations, helping them identify and implement AI solutions to solve complex business problems.",
   },
 ];
 
