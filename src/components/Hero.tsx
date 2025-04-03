@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
@@ -17,7 +16,8 @@ const Hero = () => {
     }
   }, [typedText]);
 
-  return <section id="home" className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16">
+  return (
+    <section id="home" className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16">
       <div className="absolute inset-0 bg-tech-dark z-0 opacity-90"></div>
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-tech-blue opacity-5 blur-3xl rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-tech-purple opacity-5 blur-3xl rounded-full transform -translate-x-1/4 translate-y-1/4"></div>
@@ -91,7 +91,6 @@ const Hero = () => {
             className="rounded-full"
             onClick={() => window.open('https://medium.com/@Bhawna_Rupani', '_blank')}
           >
-            {/* Medium icon SVG */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -102,10 +101,8 @@ const Hero = () => {
               strokeLinejoin="round"
               className="w-5 h-5"
             >
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-              <circle cx="8.5" cy="12" r="3.5" />
-              <circle cx="15" cy="12" r="2.5" />
-              <circle cx="19" cy="12" r="1.5" />
+              <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
+              <path d="M18 7L11.8 15.1L11.1 14.1L6 7M7 7V14M11.8 7V15M16.5 7V14" />
             </svg>
           </Button>
           <Button 
@@ -124,7 +121,8 @@ const Hero = () => {
           <ChevronDown className="w-8 h-8 text-gray-400" />
         </a>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default Hero;
