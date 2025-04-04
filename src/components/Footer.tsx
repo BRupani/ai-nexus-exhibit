@@ -1,3 +1,4 @@
+
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const Footer = () => {
@@ -59,8 +60,9 @@ const Footer = () => {
                 strokeLinejoin="round"
                 className="w-5 h-5"
               >
-                <rect x="2" y="2" width="20" height="20" rx="2" ry="2" />
-                <path d="M18 7L11.8 15.1L11.1 14.1L6 7M7 7V14M11.8 7V15M16.5 7V14" />
+                <path d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
+                <path d="M8 9l4 4 4-4" />
+                <path d="M6 13l.75-3h10.5l.75 3" />
               </svg>
             </a>
             <a
