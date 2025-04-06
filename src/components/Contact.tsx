@@ -40,12 +40,12 @@ const Contact = () => {
         to_email: 'bhawna.rupani.ai@gmail.com'
       };
 
-      // Replace these with your actual EmailJS service ID, template ID, and user ID
+      // Using the provided EmailJS credentials
       await emailjs.send(
-        'service_portfolio', // Service ID from EmailJS
-        'template_portfolio', // Template ID from EmailJS
+        'service_r3gbdj9', // Service ID from EmailJS
+        'template_dgeyuy1', // Template ID from EmailJS
         templateParams,
-        'your_user_id' // User ID from EmailJS
+        'yZfEZwL_nGhF3NMxN' // User ID from EmailJS
       );
 
       setIsSubmitted(true);
