@@ -25,7 +25,14 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 md:px-6 z-10 flex flex-col items-center text-center">
         <div className="mb-2">
-          <h2 className="text-2xl md:text-3xl font-semibold text-white">Bhawna Rupani</h2>
+          <a 
+            href="https://www.linkedin.com/in/bhawnarupani/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            <h2 className="text-2xl md:text-3xl font-semibold text-white">Bhawna Rupani</h2>
+          </a>
         </div>
         
         <div className="mb-4 inline-block">
