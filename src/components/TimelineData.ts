@@ -6,7 +6,7 @@ export const timelineData: TimelineItemData[] = [
     id: 1,
     year: "2025-Present",
     title: "Senior Gen AI Engineer",
-    company: "Cygeniq",
+    company: "NetAnalytiks",
     location: "Bangalore, India",
     region: "India",
     type: "work",
