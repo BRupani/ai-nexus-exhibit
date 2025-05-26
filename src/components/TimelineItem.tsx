@@ -22,7 +22,7 @@ const getCompanyLink = (company: string): string | null => {
   const links: Record<string, string> = {
     "Plaksha University": "https://plaksha.edu.in/",
     "HRS Group": "https://www.hrs.de",
-    "Cygeniq": "https://cygeniq.ai",
+    "NetAnalytiks": "https://www.netanalytiks.com/",
     "Tech Startup": "https://lawroomai.com"
   };
   
