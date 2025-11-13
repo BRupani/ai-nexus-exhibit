@@ -23,7 +23,8 @@ const getCompanyLink = (company: string): string | null => {
     "Plaksha University": "https://plaksha.edu.in/",
     "HRS Group": "https://www.hrs.de",
     "NetAnalytiks": "https://www.netanalytiks.com/",
-    "Tech Startup": "https://lawroomai.com"
+    "Tech Startup": "https://www.lawroomai.com",
+    "TRUGlobal" : "https://www.truglobal.com",
   };
   
   return links[company] || null;
