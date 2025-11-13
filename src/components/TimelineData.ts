@@ -55,7 +55,7 @@ export const timelineData: TimelineItemData[] = [
     region: "India",
     type: "education",
     description:
-      "Completed post-graduate degree in collaboration with UC-Berkeley and Purdue University. Selected among <5% acceptance rate and mentored by top start-up founders, angel investors and global AI leaders from Fractal, Inc42, Infoedge, IBM, Indifi, Havells, etc.",
+      "Completed post-graduate degree (AI/ML, Product, Entrepreneurship) in collaboration with UC-Berkeley and Purdue University. Selected among <5% acceptance rate and mentored by top start-up founders, angel investors and global AI leaders from Google, Bain & Co., Fractal, Inc42, Infoedge, IBM, Indifi, Havells, etc.",
   },
   {
     id: 6,
