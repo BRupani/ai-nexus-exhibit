@@ -5,7 +5,7 @@ import { ChevronDown, Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const fullText = "Senior Generative AI Engineer";
+  const fullText = "Lead Generative AI Engineer";
   const typingSpeed = 100;
 
   useEffect(() => {
