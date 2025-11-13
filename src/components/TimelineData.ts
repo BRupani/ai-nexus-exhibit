@@ -26,7 +26,7 @@ export const timelineData: TimelineItemData[] = [
   },
   {
     id: 3,
-    year: "2021-2024",
+    year: "2022-2024",
     title: "Co-Founder & CTO",
     company: "Tech Startup",
     location: "Remote",
